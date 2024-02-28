@@ -1,6 +1,9 @@
 package org.example.learnjfx;
 
+//the vast majority of this information is being pulled or derived from http://jenkov.com/tutorials/javafx/index.html
+
 import javafx.application.Application;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -42,10 +45,29 @@ public class HelloApplication extends Application {
         //this is called last to avoid exceptions of something not being set before the stage is shown
         primaryStage.show(); //show the stage
 
+        //lambda expressions explained for good measure
+        //you call a method, and that method takes two parameters. One of which has data, the other of which is equivalent to the normal {} in a method
+        //except it is instead "event -> {whatever you want to happen}, where the -> is the lambda operator
+        //the parentheses are simply because you have a parentheses denoting where the parameters for the method begin, and the event is technically a parameter, so it's within the ()
+
+        //.setOnCloseRequest will do something when stage is closed
+        //.setOnHiding will do something while stage is hiding (while-call)
+        //.setOnHidden will do something when the stage is hidden (one-time call)
+        //.setOnShowing will do something while stage is showing (while-call)
+        //.setOnShown will do something when the stage is shown (one-time call)
         primaryStage.setOnCloseRequest(event ->{
             System.out.println("Stage is closing!");
-        }); //lamba expression to complete whatever event is in {} when stage is closed
+        }); //lambda expression to complete whatever event is in {} when stage is closed
         //-> points to what should be done when event occurs
+        //on this topic, can also call primaryStage.close() to close stage
+
+        //Event Handling
+        primaryStage.addEventHandler(MouseEvent.MOUSE_CLICKED, event ->{ //lambda expression to complete whatever event is in {} when mouse is clicked
+            Label newerLabel = new Label("Mouse Clicked!"); //this is going to create a new label that says "Mouse Clicked" in the event of the mouse being clicked
+            Scene newScene = new Scene(newerLabel, 400, 200); //this is going to create a new scene and pack the label into it in the event of the mouse being clicked
+            primaryStage.setScene(newScene); //this is going to set the scene in the primaryStage to be newScene in the event of the mouse being clicked
+            System.out.println("Mouse Clicked!"); //this is going to output a line to the console to indicate that the mouse was clicked
+        });
     }
 
     public static void main(String[] args){
