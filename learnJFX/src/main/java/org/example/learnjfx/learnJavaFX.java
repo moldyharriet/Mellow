@@ -9,8 +9,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Modality; //this will only be needed when the Modality example is uncommented
 import javafx.stage.StageStyle;
+import javafx.scene.Cursor; //this would be used for the cursor example
 
-public class HelloApplication extends Application {
+public class learnJavaFX extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -29,6 +30,10 @@ public class HelloApplication extends Application {
         Label newLabel = new Label("Hello World!");
         Scene primaryScene = new Scene(newLabel, 400, 200); //creates a new scene
         primaryStage.setScene(primaryScene); //set the scene for the stage
+        /* You are allowed to set custom mouse cursors
+            primaryScene.setCursor(Cursor.CROSSHAIR); //would set the cursor to a crosshair for example
+            possible cursors include "OPEN_HAND, CLOSED_HAND, CROSSHAIR, DEFAULT, DISAPPEAR, E_RESIZE, HAND, MOVE, NE_RESIZE, NW_RESIZE, N_RESIZE, SE_RESIZE, SW_RESIZE, S_RESIZE, TEXT, V_RESIZE, W_RESIZE, WAIT, and NONE"
+         */
 
         //primaryStage.setFullscreen(true) and primaryStage.setResizable(false) could both be useful in the future, dialog windows, for example
 
