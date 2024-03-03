@@ -1,4 +1,4 @@
-package com.example.mij;
+package nc.matrixinjava;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -20,13 +20,13 @@ public class MatrixInJava extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception{ //create new start method
         FXMLLoader loader = new FXMLLoader(); //create a new FXMLLoader object, this will be used to load the FXML created with SceneBuilder
-        loader.setLocation(getClass().getResource("MatrixInJava.fxml")); //getClass() will get class of given object, getResource will get the resource of the given string
+        loader.setLocation(MatrixInJava.class.getResource("LoginScreen.fxml")); //getClass() will get class of given object, getResource will get the resource of the given string
+                                                                                        //in this case we're using MatrixInJava.class.getResource() to specify the class, and then call on the resources directory for the fxml file
 
         Scene scene = new Scene(loader.load(), 600, 400); //create a new scene object, set scene to loader.load() (which is going to load the FXML file), and set the size to 800x600
-        Stage stage = new Stage(); //create new Stage object
-        stage.setScene(scene); //set the scene for the stage
-        stage.setTitle("Matrix In Java"); //set title of stage(window)
+        primaryStage.setScene(scene); //set the scene for the stage
+        primaryStage.setTitle("Matrix In Java"); //set title of stage(window)
 
-        stage.show(); //shows the stage
+        primaryStage.show(); //shows the stage
     }
 }

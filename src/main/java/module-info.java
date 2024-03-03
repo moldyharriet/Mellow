@@ -1,8 +1,8 @@
-module com.example.mij {
+module nc.matrixinjava {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens com.example.mij to javafx.fxml;
-    exports com.example.mij;
+    opens nc.matrixinjava to javafx.fxml;
+    exports nc.matrixinjava;
 }

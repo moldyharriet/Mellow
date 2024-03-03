@@ -6,7 +6,7 @@ plugins {
   id 'org.beryx.jlink' version '2.25.0'
 }
 
-group 'com.example'
+group 'NC'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -25,8 +25,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-  mainModule = 'com.example.mij'
-  mainClass = 'com.example.mij.HelloApplication'
+  mainModule = 'nc.matrixinjava'
+  mainClass = 'nc.matrixinjava.HelloApplication'
 }
 
 javafx {
