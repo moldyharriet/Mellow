@@ -1,8 +1,8 @@
-module nc.matrixinjava {
+module rm.mellow {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens nc.matrixinjava to javafx.fxml;
-    exports nc.matrixinjava;
+    opens rm.mellow to javafx.fxml;
+    exports rm.mellow;
 }
