@@ -22,6 +22,6 @@
         </Label>
         <PasswordField layoutX="226.0" layoutY="200.0" prefHeight="7.0" prefWidth="149.0" promptText="Password" fx:id="passField" onAction="#passFieldEntered" />
         <TextField layoutX="226.0" layoutY="155.0" prefHeight="20.0" prefWidth="149.0" promptText="Username" fx:id="userField" onAction="#userFieldEntered"/>
-        <Button defaultButton="true" fx:id="loginButton" onAction="#loginButtonPressed"  layoutX="274.0" layoutY="264.0" mnemonicParsing="false" text="Login" textAlignment="CENTER" />
+        <Button fx:id="loginButton" onAction="#loginButtonPressed" layoutX="274.0" layoutY="264.0" mnemonicParsing="false" text="Login" textAlignment="CENTER" />
     </children>
 </Pane>
