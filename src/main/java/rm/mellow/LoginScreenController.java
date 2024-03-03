@@ -1,4 +1,4 @@
-package nc.matrixinjava;
+package rm.mellow;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
