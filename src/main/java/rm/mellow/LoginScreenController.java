@@ -14,6 +14,8 @@ public class LoginScreenController implements Initializable{
     //create test credentials to run the user input against
     private final String testUsername = "testUser";
     private final String testPassword = "testPass";
+    private Boolean userCorrect = false;
+    private Boolean passCorrect = false;
 
 
     @Override
@@ -29,6 +31,7 @@ public class LoginScreenController implements Initializable{
         System.out.println("Login button pressed!");
         userFieldEntered();
         passFieldEntered();
+        credsCorrect();
     }
 
     @FXML
@@ -41,6 +44,7 @@ public class LoginScreenController implements Initializable{
         }
         else{
             System.out.println("Username entered: " + input);
+            userCorrect = true;
         }
     }
 
@@ -54,6 +58,26 @@ public class LoginScreenController implements Initializable{
         }
         else{
             System.out.println("Password entered: " + input);
+            passCorrect = true;
+        }
+    }
+
+    //functions to return userCorrect and passCorrect
+    public Boolean getUserCorrect(){ //returns getUserCorrect variable
+        return userCorrect;
+    }
+    public Boolean getPassCorrect(){ //returns getPassCorrect variable
+        return passCorrect;
+    }
+
+    public Boolean credsCorrect(){ //checks if both of the credentials provided are correct, admits access if so
+        if(getUserCorrect() && getPassCorrect()) {
+            System.out.println("Admitting access!");
+            return true;
+        }
+        else{
+            System.out.println("Not admitting access. Credentials incorrect.");
+            return false;
         }
     }
 
