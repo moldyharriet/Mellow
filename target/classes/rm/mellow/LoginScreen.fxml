@@ -7,8 +7,12 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+<<<<<<< Updated upstream
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml"
       fx:controller="rm.mellow.LoginScreenController">
+=======
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rm.mellow.LoginScreenController">
+>>>>>>> Stashed changes
     <children>
         <Label alignment="CENTER" layoutX="176.0" layoutY="40.0" prefHeight="19.0" prefWidth="249.0" text="Welcome to MatrixInJava!">
             <font>
@@ -20,8 +24,15 @@
                 <Font size="14.0" />
             </font>
         </Label>
+<<<<<<< Updated upstream
         <PasswordField layoutX="226.0" layoutY="200.0" prefHeight="7.0" prefWidth="149.0" promptText="Password" fx:id="passField" onAction="#passFieldEntered" />
         <TextField layoutX="226.0" layoutY="155.0" prefHeight="20.0" prefWidth="149.0" promptText="Username" fx:id="userField" onAction="#userFieldEntered"/>
         <Button fx:id="loginButton" onAction="#loginButtonPressed" layoutX="274.0" layoutY="264.0" mnemonicParsing="false" text="Login" textAlignment="CENTER" />
+=======
+        <PasswordField fx:id="passField" layoutX="226.0" layoutY="200.0" onAction="#passFieldEntered" prefHeight="7.0" prefWidth="149.0" promptText="Password" />
+        <TextField fx:id="userField" layoutX="226.0" layoutY="155.0" onAction="#userFieldEntered" prefHeight="20.0" prefWidth="149.0" promptText="Username" />
+        <Button fx:id="loginButton" layoutX="274.0" layoutY="264.0" mnemonicParsing="false" onAction="#loginButtonPressed" text="Login" textAlignment="CENTER" />
+      <Button fx:id="testButton" onAction="#testAction" layoutX="85.0" layoutY="143.0" mnemonicParsing="false" text="testButton" />
+>>>>>>> Stashed changes
     </children>
 </Pane>
