@@ -1,0 +1,9 @@
+[package]
+name = "mellow"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+matrix-sdk = "0.10.0"
+matrix-sdk-base = "0.10.0"
+matrix-sdk-crypto = "0.10.0"
