@@ -44,4 +44,14 @@ bin/
 .DS_Store
 
 ### Cargo Crates ###
-/target*
+/target/
+/src/tauri/target
+
+### Executables ###
+*.exe
+
+### NPM/PNPM Packages ###
+node_modules/
+
+### Tauri Schema Files ###
+/src/tauri/gen/schemas
