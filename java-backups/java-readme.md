@@ -1,3 +1,0 @@
-# Why does this directory exist at this given point in time?
-When Mellow was first "drafted" as an idea for a project, it was originally thought to be developed in Java. It was using Maven for builds, and eventually we ended up leaving Java behind
-because we could not find a GUI framework for Java which we felt fit the project. Obviously, we have since moved on to Rust, and will be using *Tauri*, until further notice.
