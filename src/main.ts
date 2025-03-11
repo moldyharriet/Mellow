@@ -3,6 +3,9 @@ import { invoke } from "@tauri-apps/api/core";
 let greetInputEl: HTMLInputElement | null;
 let greetMsgEl: HTMLElement | null;
 
+// Obviously none of this TS is linked to anything right now. I just wanted to push some simple stuff
+// and finnally get back into ACTUAL web dev
+
 async function greet() {
   if (greetMsgEl && greetInputEl) {
     // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
