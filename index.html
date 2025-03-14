@@ -19,21 +19,5 @@
     <div class="logo-placeholder">Insert Logo Here<br>This is gonna look ugly right now</div>
   </div>
 </div>
-<script>
-  document.addEventListener('DOMContentLoaded', () => { //checks to make sure Tauri API is loaded appropriately before invoking scripts
-    const { invoke } = window.__TAURI__.tauri; 
-
-    document.getElementById('sign-in-button').addEventListener('click', () => {
-      console.log('Sign In button clicked');
-      invoke('login')
-        .then(response => {
-          console.log('Sign In command invoked');
-        })
-        .catch(error => {
-          console.error('Error invoking Sign In command:', error);
-        });
-    });
-  });
-</script>
 </body>
 </html>
