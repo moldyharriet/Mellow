@@ -5,7 +5,7 @@ fn greet(name: &str) -> String {
 }
 
 #[tauri::command]
-fn login(){ //will output to terminal when 'login' ID button is clicked.
+fn login(){ //will output to terminal when 'login' ID button is clicked
     println!("Sign-in Button was Clicked");
 }
 
