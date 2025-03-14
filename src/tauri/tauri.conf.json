@@ -14,8 +14,8 @@
     "windows": [
       {
         "title": "Mellow",
-        "width": 800,
-        "height": 600
+        "width": 1500,
+        "height": 900
       }
     ],
     "security": {

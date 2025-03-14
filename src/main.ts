@@ -9,7 +9,7 @@ let greetMsgEl: HTMLElement | null;
 async function greet() {
   if (greetMsgEl && greetInputEl) {
     // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    greetMsgEl.textContent = await invoke("greet", {
+    greetMsgEl.textContent = await invoke("greet", { //corresponds to fn def in src/lib.rs line 3
       name: greetInputEl.value,
     });
   }
