@@ -1,0 +1,3 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: * #all user-agents
+Disallow: / #block bots
